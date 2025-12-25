@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "@rainbow-me/rainbowkit/styles.css";
 import "./globals.css";
 import { Providers } from "./providers";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Private Vote Glow | Encrypted Voting System",

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useWalletClient } from "wagmi";
 import type { WalletClient } from "viem";
@@ -16,7 +15,6 @@ import {
   Info,
   Key,
   Eye,
-  EyeOff,
   FileText,
   Settings,
   Users,
@@ -27,7 +25,6 @@ import {
   CheckCircle,
   XCircle,
   Loader2,
-  ArrowRight,
   LockKeyhole,
   TrendingUp,
   ShieldCheck,
@@ -822,7 +819,7 @@ export function EncryptedSurveyDashboard() {
                             onClick={async () => {
                               try {
                                 await survey.allowResultForSelf(option.index);
-                              } catch (error) {
+                              } catch {
                                 // Error handling is done in the hook
                               }
                             }}
@@ -838,7 +835,7 @@ export function EncryptedSurveyDashboard() {
                       onClick={async () => {
                               try {
                         await survey.decryptOption(option.index);
-                              } catch (error) {
+                              } catch {
                                 // Error handling is done in the hook
                               }
                             }}
